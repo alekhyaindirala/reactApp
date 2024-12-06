@@ -1,8 +1,18 @@
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./components/header";
+import About from './pages/About'
+import Home from "./pages/Home";
 
 const App = () => {
   return (
-    <h1>Hello World</h1>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+
   )
 }
 
