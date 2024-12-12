@@ -1,0 +1,33 @@
+{
+    "root": true,
+    "parser": "babel-eslint",
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "react",
+      "react-hooks",
+      "prettier"
+    ],
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "react/react-in-jsx-scope": "off", // JSX doesn't need React in scope anymore with React 17+
+      "react/prop-types": "off", // Optional: turn off prop-types rule if using TypeScript or other methods
+      "prettier/prettier": "error"
+    }
+  }
+  
